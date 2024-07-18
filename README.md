@@ -19,7 +19,7 @@ Here’s a structured outline of the development process:
 * Implement a separate program (calculate_correlation) to analyze the data:
   * Parse the Excel file from the argument.
   * Read each worksheet into a Pandas array for processing.
-  * Utilize the pearsonr method from the scipy.stats module to compute correlation coefficients between different currency pairs or indices.
+  * Utilize the pearsonr method from the stats module in scipy to compute correlation coefficients between different currency pairs or indices.
   * Store the correlation coefficient data back into respective sheets within the Excel file.
 ### 5. Visual Representation
 * Apply conditional formatting to the Excel sheets to visually depict correlation strengths:

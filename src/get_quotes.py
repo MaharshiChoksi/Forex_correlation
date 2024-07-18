@@ -78,4 +78,3 @@ quote = Quotes(args.filename)
 quote.start_mt5()
 quote.pull_quotes_for_currencies()
 calculate_correlation.corr_calculation(args.filename)
-# after this step run calculate_correlation.py
