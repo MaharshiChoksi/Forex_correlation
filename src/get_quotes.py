@@ -3,12 +3,20 @@ import os
 import MetaTrader5 as mt5
 import pandas as pd
 from dotenv import load_dotenv
-
+import calculate_correlation
+import argparse
 load_dotenv(override=True)
+
+parser = argparse.ArgumentParser()
+parser.add_argument('-fn', '--filename',
+                    type=str,
+                    default=f"../data/correlation_quotes_{datetime.datetime.now().strftime('%B')}.xlsx",
+                    help='pass the excel file location and file name where the quotes will be stored')
+args = parser.parse_args()
 
 
 class Quotes:
-    def __init__(self, excel_file):
+    def __init__(self, excel_file: str):
         self.symbols = ['AUDCAD', 'AUDJPY', 'AUDUSD', 'EURAUD', 'EURCAD',
                         'EURCHF', 'EURGBP', 'EURJPY', 'EURUSD', 'GBPCHF',
                         'GBPJPY', 'GBPUSD', 'USDCAD', 'USDCHF', 'USDJPY',
@@ -66,8 +74,8 @@ class Quotes:
         quit()
 
 
-quote = Quotes(f"../data/correlation_quotes_{datetime.datetime.now().strftime('%B')}.xlsx")
+quote = Quotes(args.filename)
 quote.start_mt5()
 quote.pull_quotes_for_currencies()
-
+calculate_correlation.corr_calculation(args.filename)
 # after this step run calculate_correlation.py
