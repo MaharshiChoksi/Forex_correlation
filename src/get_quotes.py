@@ -3,17 +3,18 @@ import os
 import MetaTrader5 as mt5
 import pandas as pd
 from dotenv import load_dotenv
+
 load_dotenv(override=True)
 
 
 class Quotes:
     def __init__(self, excel_file):
         self.symbols = ['AUDCAD', 'AUDJPY', 'AUDUSD', 'EURAUD', 'EURCAD',
-                         'EURCHF', 'EURGBP', 'EURJPY', 'EURUSD', 'GBPCHF',
-                         'GBPJPY', 'GBPUSD', 'USDCAD', 'USDCHF', 'USDJPY',
-                         'NZDUSD',
-                         'XAUUSD', 'XAGUSD', 'XTIUSD', 'XBRUSD',
-                         'US30', 'US500', 'US2000']
+                        'EURCHF', 'EURGBP', 'EURJPY', 'EURUSD', 'GBPCHF',
+                        'GBPJPY', 'GBPUSD', 'USDCAD', 'USDCHF', 'USDJPY',
+                        'NZDUSD',
+                        'XAUUSD', 'XAGUSD', 'XTIUSD', 'XBRUSD',
+                        'US30', 'US500', 'US2000']
         # Short-term: 15M, Med-term: 4Hr, Long-term: 1D
         self.timeframes = [mt5.TIMEFRAME_M15, mt5.TIMEFRAME_H4, mt5.TIMEFRAME_D1]
         self.datetime_today = datetime.date.today()
@@ -53,10 +54,11 @@ class Quotes:
         for i, tf in enumerate(self.timeframes):
             df = self.quotes(self.symbols, tf, self.time_to_calculation[i])
             sheet_name = {mt5.TIMEFRAME_M15: '15Minutes', mt5.TIMEFRAME_H4: '4Hour', mt5.TIMEFRAME_D1: '1Day'}.get(tf)  # gets name of the timeframe according to the iteration
+            df.fillna(0, inplace=True)
             df.to_excel(writer, sheet_name, index=False)
 
         writer.save()
-        print(f"Quotes saved successfully to {self.excel_file} &&\n Time Taken for process is: {datetime.datetime.now()-s_time}")
+        print(f"Quotes saved successfully to {self.excel_file} &&\n Time Taken for process is: {datetime.datetime.now() - s_time}")
 
     @staticmethod
     def terminate_mt5_connection():
@@ -64,6 +66,8 @@ class Quotes:
         quit()
 
 
-quote = Quotes(f"correlation_quotes_{datetime.datetime.now().strftime('%B')}.xlsx")
+quote = Quotes(f"../data/correlation_quotes_{datetime.datetime.now().strftime('%B')}.xlsx")
 quote.start_mt5()
 quote.pull_quotes_for_currencies()
+
+# after this step run calculate_correlation.py
