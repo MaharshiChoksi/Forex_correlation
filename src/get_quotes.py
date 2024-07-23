@@ -10,7 +10,7 @@ load_dotenv(override=True)
 parser = argparse.ArgumentParser()
 parser.add_argument('-fn', '--filename',
                     type=str,
-                    default=f"../data/correlation_quotes_{datetime.datetime.now().strftime('%B')}.xlsx",
+                    default=f"../data/correlation_quotes_{datetime.datetime.now().strftime('%B_%Y-%m-%d_%H-%M')}.xlsx",
                     help='pass the excel file location and file name where the quotes will be stored')
 args = parser.parse_args()
 
@@ -40,8 +40,11 @@ class Quotes:
         if not mt5.initialize():
             print("MT5 terminal initialization failed!!")
             self.terminate_mt5_connection()
-        mt5.login(server=os.environ['SERVER'], login=os.environ['LOGIN'], password=os.environ['PASSWORD'])
-        print(f'ACCOUNT INFO: {mt5.account_info()}')
+        try:
+            mt5.login(server=os.environ['SERVER'], login=os.environ['LOGIN'], password=os.environ['PASSWORD'])
+            print(f'ACCOUNT INFO: {mt5.account_info()}')
+        except Exception as e:
+            raise Exception("Error occurred while logging in to server", e)
 
     @staticmethod
     def quotes(tickers: list, tf: int, start_time: datetime.datetime) -> pd.DataFrame:  # returns quotes in form of pandas Dataframe
@@ -67,6 +70,7 @@ class Quotes:
 
         writer.save()
         print(f"Quotes saved successfully to {self.excel_file} &&\n Time Taken for process is: {datetime.datetime.now() - s_time}")
+        return self
 
     @staticmethod
     def terminate_mt5_connection():
@@ -74,7 +78,15 @@ class Quotes:
         quit()
 
 
-quote = Quotes(args.filename)
-quote.start_mt5()
-quote.pull_quotes_for_currencies()
-calculate_correlation.corr_calculation(args.filename)
+def main():
+    try:
+        quote = Quotes(args.filename)
+        quote.start_mt5()
+        quote.pull_quotes_for_currencies()
+        calculate_correlation.corr_calculation(args.filename)
+        # implement display_charts file to store charts to Excel file
+    except Exception as e:
+        print(e)
+
+
+main()
