@@ -1,0 +1,5 @@
+.idea
+/bigdata
+.env
+/src/__pycache__
+/data/*

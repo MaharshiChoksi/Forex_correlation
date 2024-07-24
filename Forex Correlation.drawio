@@ -1,0 +1,114 @@
+<mxfile host="app.diagrams.net" modified="2024-07-15T05:21:17.181Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="YQdwMshQaQq8ZdcqzVdJ" version="24.6.5" type="device">
+  <diagram id="6a731a19-8d31-9384-78a2-239565b7b9f0" name="Page-1">
+    <mxGraphModel dx="270" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1547" value="&lt;font style=&quot;font-size: 48px;&quot;&gt;&lt;b&gt;&lt;i&gt;&lt;u&gt;FOREX CORRELATION&lt;/u&gt;&lt;/i&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1650" width="740" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1555" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wmKymwHneQfq0nZB5ncb-1551" target="wmKymwHneQfq0nZB5ncb-1554" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1551" value="Connect to mt5 terminal&lt;div&gt;and login to server&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1460" y="240" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1553" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1552" target="wmKymwHneQfq0nZB5ncb-1551" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1552" value="get_quotes.py" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1280" y="240" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1559" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1554" target="wmKymwHneQfq0nZB5ncb-1558" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1554" value="&lt;div&gt;get quotes for the hardcoded values&amp;nbsp;&lt;/div&gt;&lt;div&gt;of time in program&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1640" y="240" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1561" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1558" target="wmKymwHneQfq0nZB5ncb-1560" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1558" value="open ssh connection between linux server and program for storing quotes" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="240" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1564" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1560" target="wmKymwHneQfq0nZB5ncb-1562" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1567" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1560" target="wmKymwHneQfq0nZB5ncb-1566" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1560" value="store quotes in the excel sheet on server" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2010" y="240" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1562" value="File Name Format:&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;basecurrency quotecurrency_TF_startdate-time_enddate-time.xlsx&lt;/div&gt;&lt;div&gt;EX. EURUSD_1M_2020-01-01-00:00_2024-01-01-00:00.xlsx&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1875" y="120" width="410" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1577" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1566" target="wmKymwHneQfq0nZB5ncb-1568" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2280" y="360" />
+              <mxPoint x="1470" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1578" value="loads the program&amp;nbsp;&lt;div&gt;and&amp;nbsp;&lt;/div&gt;&lt;div&gt;find correlation for each pair&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="wmKymwHneQfq0nZB5ncb-1577" vertex="1" connectable="0">
+          <mxGeometry x="0.0045" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1566" value="load data into&amp;nbsp;&lt;div&gt;chunks in NumPy&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2210" y="240" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1570" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1568" target="wmKymwHneQfq0nZB5ncb-1569" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1568" value="correlation.py" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" y="480" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1574" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1569" target="wmKymwHneQfq0nZB5ncb-1571" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1569" value="create matrix for correlation between pairs" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1580" y="480" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1575" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1571" target="wmKymwHneQfq0nZB5ncb-1572" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1571" value="read data and&amp;nbsp;&lt;div&gt;calculate correlation&lt;div&gt;(from calculate_correlation.py)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1760" y="480" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1576" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1572" target="wmKymwHneQfq0nZB5ncb-1573" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1572" value="add calculated values in matrix to their fields&lt;div&gt;in numpy array&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="480" width="130" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1582" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1573" target="wmKymwHneQfq0nZB5ncb-1581" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2340" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1573" value="format matrix&lt;br&gt;green if value in 0.7 to 1.0&lt;div&gt;light green if value in 0.3 to 0.69&lt;/div&gt;&lt;div&gt;light light green if value in 0.1 to 0.29&lt;/div&gt;&lt;div&gt;AND&amp;nbsp;&lt;/div&gt;&lt;div&gt;red if value in -0.7 to -1.0&lt;div&gt;light red if value in -0.3 to -0.69&lt;/div&gt;&lt;div&gt;light light red if value in -0.1 to&amp;nbsp; 0.29&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;gray if 0.11 to -0.11 (no relation)&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2190" y="430" width="300" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1580" value="create dashboards for different time frames&lt;div&gt;each dashboard have Table for values&lt;div&gt;scatter charts for each pairs correlation&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1660" y="705" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1583" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="wmKymwHneQfq0nZB5ncb-1581" target="wmKymwHneQfq0nZB5ncb-1580" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1581" value="display_result.py" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1460" y="720" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="wmKymwHneQfq0nZB5ncb-1584" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;AFTER THIS WE WILL BE GOING TO USE&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;(AMAZON S3) TO STORE DATA INSTEAD OF LINUX SERVER&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;AND&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;(&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;LOOKER STUDIO)&amp;nbsp;&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;CREATE DASHBOARDS AND INSIGHTS&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" parent="1" vertex="1">
+          <mxGeometry x="1350" y="880" width="620" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="-AICjO_-4kkVJdBn7Aw5-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;b style=&quot;&quot;&gt;NOTE&lt;/b&gt;&lt;/font&gt;&lt;div&gt;&lt;font size=&quot;3&quot; style=&quot;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;&quot; size=&quot;3&quot;&gt;&lt;b&gt;AFTER ACHIEVING CURRENT PROCESS ADD ARG PARSER TO USE PROGRAM IN CLI MODE&amp;nbsp;&lt;/b&gt;&lt;/font&gt;&lt;/div&gt;" style="shape=hexagon;perimeter=hexagonPerimeter2;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="2070" y="860" width="450" height="170" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
